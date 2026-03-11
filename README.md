@@ -36,17 +36,8 @@ The program displays a café menu, allows users to place orders, generates a rec
 * Conditional statements for payment processing
 * Basic formatting for receipt display
 
----
-
-## 📂 Project Structure
-
-```
-cafe-ordering-system
-│
-└── cafe_menu.py
 ```
 
----
 
 ## ▶️ How to Run the Program
 
@@ -56,7 +47,7 @@ cafe-ordering-system
 4. Run the program:
 
 ```bash
-python cafe_menu.py
+python cafe.py
 ```
 
 ---
