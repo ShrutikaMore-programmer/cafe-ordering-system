@@ -99,5 +99,42 @@ for order in order_menu_list:
 print()
 print(f"TOTAL ITEMS: {total_quantity}")
 print(f"TOTAL PRICE: ${total_price:.2f}")
+gratuity = total_price * 8 / 100
+print(f"8% GRATUITY ON TOTAL PRICE: ${gratuity:.2f}")
+final_price = gratuity + total_price
+print()
+print(f"TOTAL PRICE WITH TAX: ${final_price:.2f}\n")
+print()
+# PAYMENT METHOD
+print(f"{BOLD}Payment Method{END}")
+payment_method = input("Enter payment method (card/cash): ").lower()
+
+if payment_method == "card":
+    print("\nProcessing card payment...")
+    print("Payment Successful! Thank you for your purchase.")
+
+elif payment_method == "cash":
+
+    while True:
+        try:
+            cash_paid = float(input("Enter cash amount paid: $"))
+
+            if cash_paid < final_price:
+                print("Insufficient amount. Please enter enough cash.")
+            else:
+                change = cash_paid - final_price
+                print(f"\nCash received: ${cash_paid:.2f}")
+                print(f"Change to return: ${change:.2f}")
+                print("Payment Successful!")
+                break
+
+        except ValueError:
+            print("Please enter a valid amount.")
+
+else:
+    print("Invalid payment method.")
+
+print(f"\n{BOLD}Thank you for visiting {cafe_name}!{END}")
+
 
 
